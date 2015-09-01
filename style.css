@@ -1,4 +1,4 @@
-html, body, .wrap {
+html, body, #wrap {
     height:100%;   
     width:100%;
     padding:0;
@@ -7,7 +7,7 @@ html, body, .wrap {
 }
 
 body {
-    font-family:'Monsterrat', 'Helvetica';
+    font-family:'Montserrat', 'Helvetica';
     color:white;
     background: url(bg-stormtest.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -22,17 +22,8 @@ h1 {
     font-size:4em;
 }
 
-.wrap {
-    position:relative;
-}
-
-.main { 
-    overflow:auto;
-}
-
-#control > button {
-    display:inline-block; 
-    margin:auto;  
+main { 
+    margin:10% auto;
     text-align:center;
 }
 
@@ -41,6 +32,7 @@ h1 {
     height:30px;
     padding:0;
     border-radius:5px; 
+    margin:auto;
 }
 
 input {
@@ -55,14 +47,3 @@ input {
     border:none;
     color:#2D3E50;
 }
-
-#control {
-    margin-top:8%;
-    text-align:center;
-    width:100%;
-    padding:20px 0;
-}
-
-#btn-sign-up {
-    margin:10px 10px 0;
-}   

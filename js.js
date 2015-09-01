@@ -1,36 +1,27 @@
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    var form        = document.getElementById("signup");
-    document.body.addEventListener("click", function(e) {
-        if(e.target.className != "btn" && e.target.nodeName != "INPUT") {
-           hideForm();
-        }
-            
-    });
+
+    var form            = document.getElementById("js-form"),
+        btnShowForm     = document.querySelector(".js-show-form"),
+        btnHideForm     = document.querySelector(".js-hide-form");
+    
+    console.log(btnHideForm);
+    
+    btnShowForm.onclick = function(e) {
+        e.preventDefault();
+        showElement(form);
+        hideElement(btnShowForm);
+    };
+    
+    btnHideForm.onclick = function(e) {
+        e.preventDefault();
+        hideElement(form);
+        showElement(btnShowForm);
+    };
+       
     form.style.display = "none";
-    
-    
 });
 
-function showForm() {
-    var form        = document.getElementById("signup"),
-        btnSignup   = document.getElementById("btn-sign-up");
-
-    if (form.style.display === "none") {
-        showElement(form);
-        hideElement(btnSignup);
-    }
-}
-
-function hideForm() {
-    var form        = document.getElementById("signup"),
-        btnSignup   = document.getElementById("btn-sign-up");
-
-    if (form.style.display != "none") {
-        showElement(btnSignup);
-        hideElement(form);
-    }
-}
 
 function hideElement(el) {
     el.style.display = "none";
